@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>프로젝트 목록</title>
+</head>
+<body>
+    <h1>프로젝트 목록 (가나다 순)</h1>
+    <u1>
+        {% for project in projects %}
+            <li>{{project.project}}</li>
+        {% empty %}
+            <li>아직 프로젝트가 등록되지 않았습니다.</li>
+        {% endfor %}
+    </u1>
+</body>
+</html>
