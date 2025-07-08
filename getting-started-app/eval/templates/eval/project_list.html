@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>프로젝트 목록</title>
+</head>
+<body>
+    <h1>프로젝트 목록 (가나다 순)</h1>
+    <u1>
+        {% for project in projects %}
+            <li>
+                <a href="{% url 'project_detail' project.pk %}">
+                    {{project.project}}
+                </a>
+            </li>
+        {% endfor %}
+    </u1>
+</body>
+</html>
