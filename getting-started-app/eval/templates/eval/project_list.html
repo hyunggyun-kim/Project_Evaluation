@@ -2,10 +2,27 @@
 <html>
 <head>
     <title>프로젝트 목록</title>
+    <style>
+        ul{
+            padding-left: 0;
+            list-style: none;
+        }
+        li{
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: #020715;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <h1>프로젝트 목록 (가나다 순)</h1>
-    <u1>
+    <ul>
         {% for project in projects %}
             <li>
                 <a href="{% url 'project_detail' project.pk %}">
@@ -13,6 +30,6 @@
                 </a>
             </li>
         {% endfor %}
-    </u1>
+    </ul>
 </body>
 </html>
